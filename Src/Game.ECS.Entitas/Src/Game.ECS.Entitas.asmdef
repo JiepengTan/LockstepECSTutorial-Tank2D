@@ -1,0 +1,4 @@
+﻿{
+	"name": "Game.ECS.Entitas",
+	"references" : [ "Engine.LockstepEngine" ]
+}
