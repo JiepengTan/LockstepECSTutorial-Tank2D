@@ -1,0 +1,44 @@
+{
+  "GenInfos": [
+    {
+      "__Comment": "NetMsg.Common",
+      "DllRelPath": "../../../LockstepPlatform/Libs/LPEngine/Lockstep.NetMsg.Common.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "NetMsg.Common",
+      "GeneratePath": "../../../LockstepPlatform/Common/NetMsg.Common/Src/",
+      "GenerateFileName": "ExtensionMsg.cs",
+      "InterfaceName": "IBaseMsg",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/Msg.json"
+    },
+    {
+      "__Comment": "MsgServer",
+      "DllRelPath": "../../../LockstepPlatform/Libs/Server/Lockstep.NetMsg.Server.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "NetMsg.Server",
+      "GeneratePath": "../../../LockstepPlatform/Server/NetMsg.Server/Src/",
+      "GenerateFileName": "ExtensionMsg.cs",
+      "InterfaceName": "IBaseMsg",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/Msg.json"
+    },
+    {
+      "__Comment": "EntityConfig",
+      "DllRelPath": "../../bin/Lockstep.Game.ECS.Tank.dll",
+      "ProjectFilePath": "../../Src/Game.ECS/Game.ECS.csproj",
+      "NameSpace": "Lockstep.Game",
+      "GeneratePath": "../../Src/Game.ECS/Src/",
+      "GenerateFileName": "ExtensionEntitySetter.cs",
+      "InterfaceName": "IEntitySetter",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/EntitySetter.json"
+    },
+    {
+      "__Comment": "TankEcs",
+      "DllRelPath": "../../bin/Lockstep.Game.ECS.Tank.dll",
+      "ProjectFilePath": "../../Src/Game.ECS/Game.ECS.csproj",
+      "NameSpace": "Lockstep.Game",
+      "GeneratePath": "../../Src/Game.ECS/Src/",
+      "GenerateFileName": "ExtensionECS.cs",
+      "InterfaceName": "Entitas.IComponent",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/ECS.json"
+    }
+  ]
+}

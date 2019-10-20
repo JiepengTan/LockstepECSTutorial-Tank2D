@@ -1,0 +1,8 @@
+﻿ServerDefine,,,
+ClientDefine,key,,
+Info,id,,
+Type,ushort,int,
+Name,asset,itemType_type,
+Value,4001,0,
+,4002,1,
+,4003,2,

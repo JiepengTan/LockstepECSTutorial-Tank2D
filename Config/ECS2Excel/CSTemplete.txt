@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using Lockstep.Serialization;
+using Lockstep.Math;
+using Entitas;
+
+namespace Lockstep.Game{
+    public partial class EntityUtil{
+        private static GameEntity CreateEntity#ENTITY_NAME(GameContext context){
+            var entity = context.CreateEntity();
+#ENTITY_INIT
+            return entity;
+        }
+        public static GameEntity CreateEntity#ENTITY_NAME(GameContext context, ushort prefabId){
+            var entity = CreateEntity#ENTITY_NAME(context);
+            var tblData = Table_#CLS_NAME.GetData(prefabId);
+            tblData.AssignToEntity(entity);
+            return entity; 
+        }
+    }
+    public partial class Table_#CLS_NAME :IAssignToEntity
+    {
+        public void AssignToEntity(object entityObj){ 
+            var entity = (GameEntity)entityObj;
+#ATTRIBUTES
+        }
+    }
+}

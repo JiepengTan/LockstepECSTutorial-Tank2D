@@ -1,0 +1,61 @@
+{
+  "FileContent": [
+    "\nusing System;                                                                                                ",
+    "\nusing System.Collections.Generic;                                                                            ",
+    "\nusing Lockstep.Serialization;                                                                                ",
+    "\nusing Lockstep.Math;                                                                                ",
+    "\nusing NetMsg.Common;                                                                                ",
+    "\n//#DECLARE_BASE_TYPES                                                                                        ",
+    "\n                                                                                                             ",
+    "\n#if !DONT_USE_GENERATE_CODE                                                                                  ",
+    "\n//#TYPES_EXTENSIONS                                                                                          ",
+    "\n#endif                                                                                                       ",
+    "\n  "
+  ],
+
+  "TypeHandler": [
+    {
+      "_defaultCodeTemplete": "{0}public {2} {1};",
+      "_enumCodeTemplete":  "{0}public {2} {1};",
+      "_clsCodeTemplete":  "{0}public {2} {1};",
+      "_arrayCodeTemplete":  "{0}public {2} {1};",
+      "_lstCodeTemplete":  "{0}public {2} {1};",
+      "_dictCodeTemplete":  "{0}public {2} {1};"
+    },
+    {
+      "_defaultCodeTemplete": "{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}",
+      "_enumCodeTemplete": "{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}",
+      "_clsCodeTemplete":  "{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}",
+      "_arrayCodeTemplete":"{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}",
+      "_lstCodeTemplete": "{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}",
+      "_dictCodeTemplete": "{0}public {2} {1} {{get => _curState.{1};set => _curState.{1} = value;}}"
+    }
+  ],
+  "ClsCodeTemplate": [
+    "\nnamespace Lockstep.Game{                                                                                              ",
+    "\n    public partial class GameStateService  {                                                                               ",
+    "\n       private _State _curState = new _State();                                                                      ",                                                                                                                     
+    "\n       public class CopyStateCmd : BaseCommand {                                                                     ",                                                                                                     
+    "\n           private _State state;                                                                                     ",                                                           
+    "\n           public override void Do(object param){                                                                    ",                                                                           
+    "\n               state = ((GameStateService) param)._curState;                                                             ",                                                                                   
+    "\n           }                                                                                                           ",                                     
+    "\n                                                                                                                       ",                                 
+    "\n           public override void Undo(object param){                                                                    ",                                                                           
+    "\n               ((GameStateService) param)._curState = state;                                                           ",                                                                                     
+    "\n           }                                                                                                           ",                                     
+    "\n       }                                                                                                             ",                                   
+    "\n       public override void Backup(int tick){                                                                        ",                                                                       
+    "\n           cmdBuffer.Execute(tick, new CopyStateCmd());                                                                ",                                                                               
+    "\n       }                                                                                                             ",                                   
+    "\n       protected override FuncUndoCommands GetRollbackFunc(){                                                        ",                                                                                       
+    "\n           return (minTickNode, maxTickNode, param) => { minTickNode.cmd.Undo(param); };                               ",                                                                                                                 
+    "\n       }                                                                                                             ",                                   
+    "\n       public struct _State {                                                                                       ",                                                         
+    "\n#TYPE_HANDLE0                                                                                               ",                                                 
+    "\n       }                                                                                                             ",
+    "\n#TYPE_HANDLE1                                                                                               ",
+    "\n   }                                                                                                             ",
+    "\n}                                                                                                             "
+  ]                                                                                                                                               
+}

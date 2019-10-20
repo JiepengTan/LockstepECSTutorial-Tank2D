@@ -1,0 +1,23 @@
+{
+  "NameSpaceTag" : "Tools.ECS.ECDefine",
+  "IgnoreDll"    : "Engine.LockstepEngine.dll",
+  "BuildECdefineShell" : "../Tools/BuildECDefineGame.sh",
+  "BuildECdefineShellWorkingDir" : "",
+  "BuildShell" : "../Tools/BuildCodeGenEntitas.sh",
+  "BuildShellWorkingDir" : "",
+  "DesFilePath" : "../Src/Tools.ECS.CodeGenEntitas/Src/Components/" ,
+  "SrcCopyRelDir" : "../Src/Tools.ECS.CodeGenEntitas/Src/",
+  "DstCopyRelDir" : "../Src/Tools.ECS.ECSOutput/Src/Entitas/",
+  "RelCopyDir" : "Src/Entitas/Components/",
+  "_FileHeaderStrs":[                   
+    "\nusing Entitas.CodeGeneration.Attributes;                                           ", 
+    "\nusing Lockstep.Math;                                                               ",
+    "\nusing Entitas;                                                                     ",
+    "\nusing System;                                                                      ",
+    "\nusing Lockstep.Serialization;",
+    "\n"
+  ],
+  
+  
+  "JennyPropertyPath" : "../Tools/Jenny.properties"
+}

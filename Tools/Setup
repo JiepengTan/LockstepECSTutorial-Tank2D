@@ -1,0 +1,32 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+mkdir -p ./bin/
+cd ./bin/
+echo "1.Copy tools to bin dir"
+cp $(find ../Libs/ -name "*.dll" -o -name "*.pdb" -o -name "*.xml" -o -name "*.pdb") ../bin/
+cp $(find ../Tools/Libs_Mac/ -name "*.*") ../bin/
+
+echo "2.Copy Entitas to Client dir"
+mkdir -p ../Src/Client.Unity/Assets/Plugins/Entitas/
+cp -rf ../Libs/DesperateDevs ../Src/Client.Unity/Assets/Plugins/Entitas
+cp -rf ../Libs/Entitas ../Src/Client.Unity/Assets/Plugins/Entitas
+
+echo "3.Code gen"
+mono ./Tools.ECSGenerator.exe ../Config/ECSGenerator/Config.json
+
+echo "4.Copy files"
+../Tools/ECSCopyFile
+
+echo "5.ECS2Excel"
+../Tools/ECS2Excel
+
+echo "6.ParseExcel"
+../Tools/ExcelParser
+
+echo "7.Complile generated code"
+msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ../Src/Tools.ECS.ECSOutput/Tools.ECS.ECSOutput.csproj
+
+echo "8.Build Game Project"
+../Tools/BuildAndCopyDll2Untiy

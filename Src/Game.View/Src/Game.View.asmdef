@@ -1,0 +1,7 @@
+﻿{
+	"name": "Game.View",
+	"references": [
+		"Engine.View",
+		"Common.View"
+	]
+}

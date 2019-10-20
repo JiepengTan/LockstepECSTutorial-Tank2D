@@ -1,0 +1,13 @@
+{
+  "TempleteCodePath": "../Config/ECS2Excel/CSTemplete.txt",
+  "OutputExcelDir": "../Data/Designer/Excels/EntityConfig/",
+  "OutputCodeDir": "../Config/ECS2Excel/Output/",
+  "RelPath": "../bin/",
+  "DllName": "Tools.ECS.ECDefine.Game.dll",
+  
+  "InterfaceName": "IEntity",
+  "IgnoreTypeAttriName": "NoExcelAttribute",
+  "IgnoreFiledAttriName": "NoExcelAttribute",
+  "ForceGenAttriName": "ForceExcelAttribute",
+  "KeyIdAttriName": "KeyIdAttribute"
+}

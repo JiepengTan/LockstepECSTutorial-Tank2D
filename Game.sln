@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.ECS.Entitas", "Src\Game.ECS.Entitas\Game.ECS.Entitas.csproj", "{63C811C5-1C80-48B1-B212-74BD28A83E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Interfaces", "Src\Game.Interfaces\Game.Interfaces.csproj", "{B7671FF6-04CB-4D96-8063-5FA16E9B9211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Model", "Src\Game.Model\Game.Model.csproj", "{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.View", "Src\Game.View\Game.View.csproj", "{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63C811C5-1C80-48B1-B212-74BD28A83E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C811C5-1C80-48B1-B212-74BD28A83E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C811C5-1C80-48B1-B212-74BD28A83E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C811C5-1C80-48B1-B212-74BD28A83E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7671FF6-04CB-4D96-8063-5FA16E9B9211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7671FF6-04CB-4D96-8063-5FA16E9B9211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7671FF6-04CB-4D96-8063-5FA16E9B9211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7671FF6-04CB-4D96-8063-5FA16E9B9211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

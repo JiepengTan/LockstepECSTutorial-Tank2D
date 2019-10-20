@@ -1,0 +1,59 @@
+{
+  "GenInfos": [
+    {
+      "__Comment": "NetMsg.Commons",
+      "DllRelPath": "../Library/ScriptAssemblies/Engine.LockstepEngine.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "NetMsg.Common",
+      "GeneratePath": "Scripts/Engine.LockstepEngine/NetMsg.Common/Src/",
+      "GenerateFileName": "ExtensionMsg.cs",
+      "InterfaceName": "IBaseMsg",
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "TypeHandlerConfigPath": "Resources/CodeGenerator/TypeHandler/Msg.json"
+    },
+    {
+      "__Comment": "GameConfig",
+      "DllRelPath": "../Library/ScriptAssemblies/Game.Interfaces.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "NetMsg.Common",
+      "GeneratePath": "Scripts/Game.Logic/Services/",
+      "GenerateFileName": "ExtensionGameConfig.cs",
+      "InterfaceName": "IGameConfigService",
+      "OnlyInterface": true,
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "TypeHandlerConfigPath": "Resources/CodeGenerator/TypeHandler/GameConfig.json"
+    },
+    {
+      "__Comment": "GameConstState",
+      "DllRelPath": "../Library/ScriptAssemblies/Game.Interfaces.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "",
+      "GeneratePath": "Scripts/Game.Logic/Services/",
+      "GenerateFileName": "ExtensionGameConstState.cs",
+      "InterfaceName": "IGameConstStateService",
+      "OnlyInterface": true,
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "TypeHandlerConfigPath": "Resources/CodeGenerator/TypeHandler/GameConstState.json"
+    },
+    {
+      "__Comment": "IGameStateService",
+      "DllRelPath": "../Library/ScriptAssemblies/Game.Interfaces.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "",
+      "GeneratePath": "Scripts/Game.Logic/Services/",
+      "GenerateFileName": "ExtensionGameState.cs",
+      "InterfaceName": "IGameStateService",
+      "OnlyInterface": true,
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "TypeHandlerConfigPath": "Resources/CodeGenerator/TypeHandler/GameState.json"
+    }
+  ]
+}

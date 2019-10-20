@@ -1,0 +1,7 @@
+Src/
+# Build and Object Folders  
+bin/  
+obj/  
+# ide
+.idea/
+.vs/

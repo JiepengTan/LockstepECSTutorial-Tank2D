@@ -1,0 +1,6 @@
+﻿ServerDefine,,,,,
+ClientDefine,key,,,,
+Info,id,,,,
+Type,ushort,string,int,int,
+Name,asset,unit_name,unit_health,unit_damage,
+Value,1001,camp,1,1,

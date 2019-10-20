@@ -1,0 +1,13 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+cd ./bin
+pwd
+echo "1.ECS2Excel"
+mono Tools.ECS2Excel.exe ../Config/ECS2Excel/Config.json
+
+echo "2.Copy Source File"
+rm -rf ../Src/Game.Model/Src/__ECS2Excel/*.cs
+mkdir -p ../Src/Game.Model/Src/__ECS2Excel/
+cp ../Config/ECS2Excel/Output/*.cs ../Src/Game.Model/Src/__ECS2Excel
+

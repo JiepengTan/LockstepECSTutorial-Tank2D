@@ -1,0 +1,14 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+cd ./bin
+pwd
+echo "1.ExcelParser"
+mono Tools.ExcelParser.exe ../Config/ExcelParser/Config.json
+
+echo "2.Copy Source File"
+rm -rf ../Src/Game.Model/Src/__ExcelParser/*.cs
+mkdir -p ../Src/Game.Model/Src/__ExcelParser/
+cp ../Config/ExcelParser/Output/CodeCS/*.cs ../Src/Game.Model/Src/__ExcelParser/
+rm -rf ../Src/Game.Model/Src/__ExcelParser/Table_Assets.cs
+

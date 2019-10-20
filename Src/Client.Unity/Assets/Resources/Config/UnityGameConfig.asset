@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694f6d1cb505e4ec1b910ae91a189582, type: 3}
+  m_Name: UnityGameConfig
+  m_EditorClassIdentifier: 
+  pureConfig:
+    BornEnemyInterval: 3
+    BornPrefabAssetId: 3001
+    DiedPrefabAssetId: 3002
+    DumpStrPath: 
+    InitEnemyCount: 28
+    MaxEnemyCount: 6
+    MaxPlayerCount: 2
+    RecorderFilePath: 
+    RelPath: 
+    TankBornDelay:
+      _val: 1000000
+    TankBornOffset:
+      _x: 1000000
+      _y: 1000000
+    ClientModeInfo:
+      LocalId: 0
+      UserCount: 1
+      MapId: 0
+      RoomId: 0
+      Seed: 0
+      UserInfos:
+      - _Username: TestClient
+        _UserId: 0
+        _Datas: []
+      UdpEnd:
+        Ip: 
+        Port: 0
+      TcpEnd:
+        Ip: 
+        Port: 0
+      SimulationSpeed: 0
+    CollisionConfig:
+      scrollPos: {x: 0, y: 0}
+      isShow: 0
+      collisionMatrix: 000000000000000000
+      pos:
+        _x: 0
+        _y: 0
+        _z: 0
+      worldSize:
+        _val: 60000000
+      minNodeSize:
+        _val: 1000000
+      loosenessval:
+        _val: 1250000
+      ColliderDataRelFilePath: 
+      percent:
+        _val: 100000
+      count: 100
+      showTreeId: 0

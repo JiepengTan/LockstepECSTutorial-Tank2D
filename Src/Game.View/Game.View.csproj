@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game.View</RootNamespace>
+    <AssemblyName>Game.View</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>../../bin</OutputPath>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Common.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Common.View.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine.Editor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Engine.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine.LockstepEngine.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Engine.LockstepEngine.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Engine.View.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Attributes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <HintPath>..\..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Framework\InputMono.cs" />
+    <Compile Include="Src\Framework\PingMono.cs" />
+    <Compile Include="Src\Framework\UnityServiceContainer.cs" />
+    <Compile Include="Src\Launcher\HotfixScript.cs" />
+    <Compile Include="Src\Launcher\MainScript.cs" />
+    <Compile Include="Src\Listeners\MoverView.cs" />
+    <Compile Include="Src\Services\UnityGameAudioService.cs" />
+    <Compile Include="Src\Services\UnityGameEffectService.cs" />
+    <Compile Include="Src\Services\UnityGameService.cs" />
+    <Compile Include="Src\Services\UnityMap2DService.cs" />
+    <Compile Include="Src\Services\UnityViewService.cs" />
+    <Compile Include="Src\UIPanels\Game\UIGameStatus.cs" />
+    <Compile Include="Src\UIPanels\UICreateRoom.cs" />
+    <Compile Include="Src\UIPanels\UIECSDebugInfo.cs" />
+    <Compile Include="Src\UIPanels\UILoading.cs" />
+    <Compile Include="Src\UIPanels\UILobby.cs" />
+    <Compile Include="Src\UIPanels\UILogin.cs" />
+    <Compile Include="Src\UIPanels\UIRoomList.cs" />
+    <Compile Include="Src\UIPanels\UIRoot.cs" />
+    <Compile Include="Src\UIPanels\Widget\ListItemPlayer.cs" />
+    <Compile Include="Src\UIPanels\Widget\ListItemRoom.cs" />
+    <Compile Include="Src\UIPanels\Widget\LoginFormData.cs" />
+    <Compile Include="Src\UnityGameConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Game.ECS.Entitas\Game.ECS.Entitas.csproj">
+      <Project>{63c811c5-1c80-48b1-b212-74bd28a83e4c}</Project>
+      <Name>Game.ECS.Entitas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game.Interfaces\Game.Interfaces.csproj">
+      <Project>{b7671ff6-04cb-4d96-8063-5fa16e9b9211}</Project>
+      <Name>Game.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game.Model\Game.Model.csproj">
+      <Project>{fbcee2cd-7d5f-4cc9-b78d-4a16228899b4}</Project>
+      <Name>Game.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Src\.DS_Store" />
+    <Content Include="Src\Game.View.asmdef" />
+    <Content Include="Src\UIPanels\.DS_Store" />
+    <Content Include="Src\UIPanels\Widget\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

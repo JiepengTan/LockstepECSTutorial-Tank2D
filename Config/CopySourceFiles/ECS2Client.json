@@ -1,0 +1,12 @@
+[
+  {
+    "__commment": "Copy Entitas Generated file to client: pwd=~/LPEngine/Lockstep_Demo2D/Tools/bin/",
+    "srcDir": "../Src/Tools.ECS.ECSOutput/Src/",
+    "dstDir": "../Src/Game.ECS.Entitas/Src/",
+    "srcProjectDirs": [
+      "Entitas/Components",
+      "Entitas/Generated"
+    ],
+    "sourceFileDir": ""
+  }
+]

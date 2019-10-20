@@ -1,0 +1,25 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+cd ./Src/
+pwd
+cp -rf ./Client.Unity/Assets/Scripts/Common.Logic/ ./Common.Model/Src/ 
+find ./Common.Model/Src/ -name "*.meta" |xargs rm -f
+
+cp -rf ./Client.Unity/Assets/Scripts/Common.Interfaces/ ./Common.Interfaces/Src/ 
+find ./Common.Interfaces/Src/ -name "*.meta" |xargs rm -f
+
+cp -rf ./Client.Unity/Assets/Scripts/Engine.LockstepEngine/ ./Engine.LockstepEngine.Unity/Src/ 
+find ./Engine.LockstepEngine.Unity/Src/ -name "*.meta" |xargs rm -f
+
+cp -rf ./Client.Unity/Assets/Scripts/Game.ECS.Entitas/ ./Game.ECS.Entitas/Src/ 
+find ./Game.ECS.Entitas/Src/ -name "*.meta" |xargs rm -f
+
+cp -rf ./Client.Unity/Assets/Scripts/Game.Interfaces/ ./Game.Interfaces/Src/ 
+find ./Game.Interfaces/Src/ -name "*.meta" |xargs rm -f
+
+cp -rf ./Client.Unity/Assets/Scripts/Game.Logic/ ./Game.Model/Src/ 
+find ./Game.Model/Src/ -name "*.meta" |xargs rm -f
+find ./Game.View/Src/ -name "*.meta" |xargs rm -f
+find ./Common.Editor/Src/ -name "*.meta" |xargs rm -f
+find ./Engine.Editor/Src/ -name "*.meta" |xargs rm -f

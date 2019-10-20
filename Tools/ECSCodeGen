@@ -1,0 +1,13 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+cd ./bin/
+echo "1.Code gen"
+mono ./Tools.ECSGenerator.exe ../Config/ECSGenerator/Config.json
+
+echo "2.Copy files"
+../Tools/ECSCopyFile
+
+echo "3.Complile generated code"
+msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ../Src/Tools.ECS.ECSOutput/Tools.ECS.ECSOutput.csproj

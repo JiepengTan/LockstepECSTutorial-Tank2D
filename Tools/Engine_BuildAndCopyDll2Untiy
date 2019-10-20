@@ -1,0 +1,9 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+echo "1.Build Engine soulution"
+msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ./GameDev.sln
+
+echo "2.Copy files"
+./Tools/CopyDll2Untiy

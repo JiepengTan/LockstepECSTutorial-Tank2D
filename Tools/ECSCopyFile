@@ -1,0 +1,8 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+cd ./bin/
+
+echo "1.Copy files"
+mono ./Tools.CopySourceFiles.dll ../Config/CopySourceFiles/ECS2Client.json

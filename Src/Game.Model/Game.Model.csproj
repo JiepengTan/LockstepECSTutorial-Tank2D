@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBCEE2CD-7D5F-4CC9-B78D-4A16228899B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game.Model</RootNamespace>
+    <AssemblyName>Game.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>../../bin</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Common.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine.LockstepEngine.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\LockstepEngine\Engine.LockstepEngine.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Attributes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <HintPath>..\..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Libs\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Config\AudioConfig.cs" />
+    <Compile Include="Src\Config\GameConfig.cs" />
+    <Compile Include="Src\EntitasFramework\BaseSystem.cs" />
+    <Compile Include="Src\EntitasFramework\BaseSystemReferenceHolder.cs" />
+    <Compile Include="Src\EntitasFramework\EntitasWorld.cs" />
+    <Compile Include="Src\EntitasFramework\Interfaces\IComponentSetter.cs" />
+    <Compile Include="Src\EntitasFramework\Interfaces\IEventListener.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\Actor\InitializeEntityCount.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\Debugging\VerifyNoDuplicateBackups.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\GameState\CalculateHashCode.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\GameState\CleanDestroyedGameEntities.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\GameState\IncrementTick.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\GameState\OnPredictionCreateSnapshot.cs" />
+    <Compile Include="Src\EntitasFramework\Systems\Input\CleanDestroyedInputEntities.cs" />
+    <Compile Include="Src\EntitasFramework\WorldSystems.cs" />
+    <Compile Include="Src\PureServices\PureGameAudioService.cs" />
+    <Compile Include="Src\PureServices\PureGameEffectService.cs" />
+    <Compile Include="Src\PureServices\PureViewService.cs" />
+    <Compile Include="Src\Services\EntitasECSFactoryService.cs" />
+    <Compile Include="Src\Services\ExtensionGameConfig.cs" />
+    <Compile Include="Src\Services\ExtensionGameConstState.cs" />
+    <Compile Include="Src\Services\ExtensionGameState.cs" />
+    <Compile Include="Src\Services\ExtensionGameUnityService.cs" />
+    <Compile Include="Src\Services\GameCollision2DService.cs" />
+    <Compile Include="Src\Services\GameConfigService.cs" />
+    <Compile Include="Src\Services\GameConstStateService.cs" />
+    <Compile Include="Src\Services\GameInputService.cs" />
+    <Compile Include="Src\Services\GameResourceService.cs" />
+    <Compile Include="Src\Services\GameStateService.cs" />
+    <Compile Include="Src\Services\GameUnitService.cs" />
+    <Compile Include="Src\System\CleanupFeature.cs" />
+    <Compile Include="Src\System\Cleanup\SystemRemoveDestroyedEntitiesFromView.cs" />
+    <Compile Include="Src\System\GameFeature.cs" />
+    <Compile Include="Src\System\GameInitStateFeature.cs" />
+    <Compile Include="Src\System\GameLogicSystems.cs" />
+    <Compile Include="Src\System\GameState\SystemGameInit.cs" />
+    <Compile Include="Src\System\Game\SystemApplyCampDestroyEffect.cs" />
+    <Compile Include="Src\System\Game\SystemApplyEnemyDestroyEffect.cs" />
+    <Compile Include="Src\System\Game\SystemApplyItemDestroyEffect.cs" />
+    <Compile Include="Src\System\Game\SystemApplyPlayerDestroyEffect.cs" />
+    <Compile Include="Src\System\Game\SystemCollisionDetected.cs" />
+    <Compile Include="Src\System\Game\SystemDelayCall.cs" />
+    <Compile Include="Src\System\Game\SystemEnemyBorn.cs" />
+    <Compile Include="Src\System\Game\SystemExecuteFire.cs" />
+    <Compile Include="Src\System\Game\SystemExecuteMove.cs" />
+    <Compile Include="Src\System\Game\SystemExecuteMoveBullet.cs" />
+    <Compile Include="Src\System\Game\SystemExecuteMovePlayer.cs" />
+    <Compile Include="Src\System\Game\SystemExecuteMoveTank.cs" />
+    <Compile Include="Src\System\Game\SystemSkillUpdate.cs" />
+    <Compile Include="Src\System\Game\SystemUpdateAI.cs" />
+    <Compile Include="Src\System\InputFeature.cs" />
+    <Compile Include="Src\System\Input\SystemInputHandler.cs" />
+    <Compile Include="Src\Util\DirUtil.cs" />
+    <Compile Include="Src\Util\EntityUtil.cs" />
+    <Compile Include="Src\Util\FuncUtil.cs" />
+    <Compile Include="Src\Util\GameCollisionUtil.cs" />
+    <Compile Include="Src\Util\RecordUtil.cs" />
+    <Compile Include="Src\Util\TankUtil.cs" />
+    <Compile Include="Src\Util\TilemapUtil.cs" />
+    <Compile Include="Src\__ECS2Excel\ConfigBullet.cs" />
+    <Compile Include="Src\__ECS2Excel\ConfigCamp.cs" />
+    <Compile Include="Src\__ECS2Excel\ConfigEnemy.cs" />
+    <Compile Include="Src\__ECS2Excel\ConfigItem.cs" />
+    <Compile Include="Src\__ECS2Excel\ConfigPlayer.cs" />
+    <Compile Include="Src\__ExcelParser\Table_ConfigBullet.cs" />
+    <Compile Include="Src\__ExcelParser\Table_ConfigCamp.cs" />
+    <Compile Include="Src\__ExcelParser\Table_ConfigEnemy.cs" />
+    <Compile Include="Src\__ExcelParser\Table_ConfigItem.cs" />
+    <Compile Include="Src\__ExcelParser\Table_ConfigPlayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Game.ECS.Entitas\Game.ECS.Entitas.csproj">
+      <Project>{63c811c5-1c80-48b1-b212-74bd28a83e4c}</Project>
+      <Name>Game.ECS.Entitas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game.Interfaces\Game.Interfaces.csproj">
+      <Project>{b7671ff6-04cb-4d96-8063-5fa16e9b9211}</Project>
+      <Name>Game.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Src\.DS_Store" />
+    <Content Include="Src\Game.Logic.asmdef" />
+    <Content Include="Src\System\.DS_Store" />
+    <Content Include="Src\System\Input\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

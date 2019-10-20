@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+rm -rf ./Src/Engine.LockstepEngine/Src/LockstepEngine
+cp -rf ./Src/Client.Unity/Assets/Scripts/Engine.LockstepEngine/ ./Src/Engine.LockstepEngine/Src/LockstepEngine
+
+
+echo "2.Complile generated code"
+msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ./Src/Engine.LockstepEngine/Engine.LockstepEngine.csproj

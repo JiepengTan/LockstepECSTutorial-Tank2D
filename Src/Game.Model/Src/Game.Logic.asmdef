@@ -1,0 +1,10 @@
+﻿{
+    "name": "Game.Logic",
+    "references": [
+        "Engine.LockstepEngine",
+        "Game.ECS.Entitas",
+        "Game.Interfaces",
+        "Common.Interfaces",
+        "Common.Logic"
+    ]
+}
