@@ -8,6 +8,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Model", "Src\Game.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.View", "Src\Game.View\Game.View.csproj", "{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.ECS.CodeGenEntitas", "Src\Tools.ECS.CodeGenEntitas\Tools.ECS.CodeGenEntitas.csproj", "{A0AB5587-B553-4EB1-A5C1-A0F0A41E4B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.ECS.ECDefine.Game", "Src\Tools.ECS.ECDefine.Game\Tools.ECS.ECDefine.Game.csproj", "{E98D4497-E840-4A13-AF87-03A1CEAE167A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.ECS.ECSOutput", "Src\Tools.ECS.ECSOutput\Tools.ECS.ECSOutput.csproj", "{A216EDC3-025C-4786-9CC1-B2A92E6526C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +36,17 @@ Global
 		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9028C8F4-60FC-49C8-9540-0C1520F8D6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AB5587-B553-4EB1-A5C1-A0F0A41E4B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AB5587-B553-4EB1-A5C1-A0F0A41E4B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AB5587-B553-4EB1-A5C1-A0F0A41E4B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AB5587-B553-4EB1-A5C1-A0F0A41E4B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98D4497-E840-4A13-AF87-03A1CEAE167A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98D4497-E840-4A13-AF87-03A1CEAE167A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98D4497-E840-4A13-AF87-03A1CEAE167A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98D4497-E840-4A13-AF87-03A1CEAE167A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A216EDC3-025C-4786-9CC1-B2A92E6526C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A216EDC3-025C-4786-9CC1-B2A92E6526C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A216EDC3-025C-4786-9CC1-B2A92E6526C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A216EDC3-025C-4786-9CC1-B2A92E6526C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
