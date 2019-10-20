@@ -1,0 +1,17 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/
+pwd
+
+mkdir -p ./TempCode/Excel/
+cp -rf ./Data/Designer/Excels/EntityConfig/ ./TempCode/Excel/
+
+cd ./Tools
+./Setup
+
+
+rm -rf ../Data/Designer/Excels/EntityConfig/*.*
+cp -rf ../TempCode/Excel/ ../Data/Designer/Excels/EntityConfig/
+
+../Tools/ExcelParser
+
