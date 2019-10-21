@@ -1,8 +1,0 @@
-﻿{
-	"name": "Game.Interfaces",
-	"references": [
-		"Engine.LockstepEngine",
-		"Game.ECS.Entitas",
-		"Common.Interfaces"
-	]
-}

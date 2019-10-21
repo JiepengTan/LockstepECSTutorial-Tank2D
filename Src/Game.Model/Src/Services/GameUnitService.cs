@@ -48,8 +48,8 @@ namespace Lockstep.Game {
                 return;
             }
 
-            var min = _gameConstStateService.mapMin;
-            var max = _gameConstStateService.mapMax;
+            var min = _gameConstStateService.MapMin;
+            var max = _gameConstStateService.MapMax;
             var x = _randomService.Range(min.x + 4, max.x - 4);
             var y = _randomService.Range(min.y + 4, max.y - 4);
             var detailType = _randomService.Range(0, (int)EItemType.EnumCount);
@@ -95,7 +95,7 @@ namespace Lockstep.Game {
         }
 
         public void CreatePlayer(byte actorId, ushort type){
-            var bornPos = _gameConstStateService.playerBornPoss[actorId % _gameConstStateService.playerBornPoss.Count];
+            var bornPos = _gameConstStateService.PlayerBornPoss[actorId % _gameConstStateService.PlayerBornPoss.Count];
             var createPos = bornPos + _gameConfigService.TankBornOffset;
             _gameEffectService.ShowBornEffect(createPos);
             _gameAudioService.PlayClipBorn();
@@ -118,8 +118,8 @@ namespace Lockstep.Game {
 
         private GameEntity CreateUnit(LVector2 createPos, GameEntity entity, EDir dir){
             var assetId = entity.asset.assetId;
-            entity.AddEntityId(_gameStateService.localEntityId);
-            _gameStateService.localEntityId++;
+            entity.AddEntityId(_gameStateService.LocalEntityId);
+            _gameStateService.LocalEntityId++;
             entity.collider.size = LVector2.one;
             entity.collider.radius = LVector2.one.magnitude;
             entity.dir.value = dir;

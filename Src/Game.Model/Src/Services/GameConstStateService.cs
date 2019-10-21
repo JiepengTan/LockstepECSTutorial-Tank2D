@@ -17,7 +17,7 @@ namespace Lockstep.Game {
 
         public override void DoStart(){
             base.DoStart();
-            playerInitLifeCount = 3;
+            PlayerInitLifeCount = 3;
             IsGameOver = false;
         }
 

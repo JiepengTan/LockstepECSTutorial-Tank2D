@@ -8,10 +8,10 @@ namespace Lockstep.Game.Systems.GameState {
             //reset status
             _gameConstStateService.MaxEnemyCountInScene = 6;
             _gameConstStateService.TotalEnemyCountToBorn = 20;
-            _gameStateService.remainCountToBorn = _gameConstStateService.TotalEnemyCountToBorn;
-            _gameStateService.curEnemyCountInScene = 0;
-            _gameStateService.bornTimer = 0;
-            _gameStateService.bornInterval = 3;
+            _gameStateService.RemainCountToBorn = _gameConstStateService.TotalEnemyCountToBorn;
+            _gameStateService.CurEnemyCountInScene = 0;
+            _gameStateService.BornTimer = 0;
+            _gameStateService.BornInterval = 3;
             
             //create actors
             var startInfo = _constStateService.GameStartInfo;
@@ -19,7 +19,7 @@ namespace Lockstep.Game.Systems.GameState {
                 var entity = _actorContext.CreateEntity();
                 entity.AddActorId((byte)i);
                 entity.AddScore(0);
-                entity.AddLife(_gameConstStateService.playerInitLifeCount);
+                entity.AddLife(_gameConstStateService.PlayerInitLifeCount);
             }
             var enttity = _actorContext.GetEntityWithActorId(0);
             
@@ -30,7 +30,7 @@ namespace Lockstep.Game.Systems.GameState {
             Table_ConfigItem.Load();
             
             //create camps 
-            var campPos = _gameConstStateService.campPos;
+            var campPos = _gameConstStateService.CampPos;
             _gameUnitService.CreateCamp(campPos,1001);
             
             //create Player entity

@@ -7,7 +7,10 @@ echo "1.Code gen"
 mono ./Tools.ECSGenerator.exe ../Config/ECSGenerator/Config.json
 
 echo "2.Copy files"
-../Tools/ECSCopyFile
+mkdir -p ../Src/Game.Model/Src/__Entitas/
+rm -rf ../Src/Game.Model/Src/__Entitas/
+cp -rf ../Src/Tools.ECS.ECSOutput/Src/Entitas/ ../Src/Game.Model/Src/__Entitas/
+rm -rf ../Src/Game.Model/Src/__Entitas/Common/
 
 echo "3.Complile generated code"
 #msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ../Src/Tools.ECS.ECSOutput/Tools.ECS.ECSOutput.csproj

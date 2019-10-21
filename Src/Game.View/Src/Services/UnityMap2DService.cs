@@ -31,11 +31,11 @@ namespace Lockstep.Game {
             playerBornPoss = tileInfo.GetAllTiles(TilemapUtil.TileID_BornPosHero);
             var _gameConstStateService = GetService<IGameConstStateService>();
             if (_gameConstStateService != null) {
-                _gameConstStateService.mapMin = mapDataMin;
-                _gameConstStateService.mapMax = mapDataMax;
-                _gameConstStateService.enemyBornPoints = enemyBornPoints;
-                _gameConstStateService.playerBornPoss = playerBornPoss;
-                _gameConstStateService.campPos = campPos;
+                _gameConstStateService.MapMin = mapDataMin;
+                _gameConstStateService.MapMax = mapDataMax;
+                _gameConstStateService.EnemyBornPoints = enemyBornPoints;
+                _gameConstStateService.PlayerBornPoss = playerBornPoss;
+                _gameConstStateService.CampPos = campPos;
             }
 
             EventHelper.Trigger(EEvent.LevelLoadProgress, 0.5f);

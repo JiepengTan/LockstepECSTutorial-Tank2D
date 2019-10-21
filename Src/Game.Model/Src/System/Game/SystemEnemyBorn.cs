@@ -8,14 +8,14 @@ namespace Lockstep.Game.Systems.Game {
 
 
         public void Execute(){
-            if (_gameStateService.curEnemyCountInScene < _gameConstStateService.MaxEnemyCountInScene && _gameStateService.remainCountToBorn > 0) {
-                _gameStateService.bornTimer -= _gameStateService.DeltaTime;
-                if (_gameStateService.bornTimer < 0) {
-                    _gameStateService.bornTimer = _gameStateService.bornInterval;
-                    _gameStateService.remainCountToBorn--;
-                    _gameStateService.curEnemyCountInScene++;
+            if (_gameStateService.CurEnemyCountInScene < _gameConstStateService.MaxEnemyCountInScene && _gameStateService.RemainCountToBorn > 0) {
+                _gameStateService.BornTimer -= _gameStateService.DeltaTime;
+                if (_gameStateService.BornTimer < 0) {
+                    _gameStateService.BornTimer = _gameStateService.BornInterval;
+                    _gameStateService.RemainCountToBorn--;
+                    _gameStateService.CurEnemyCountInScene++;
                     //born enemy
-                    var allPoints = _gameConstStateService.enemyBornPoints;
+                    var allPoints = _gameConstStateService.EnemyBornPoints;
                     var bornPointCount = allPoints.Count;
                     var idx = _randomService.Range(0, bornPointCount);
                     var bornPoint = allPoints[idx];

@@ -1,44 +1,59 @@
 {
   "GenInfos": [
     {
-      "__Comment": "NetMsg.Common",
-      "DllRelPath": "../../../LockstepPlatform/Libs/LPEngine/Lockstep.NetMsg.Common.dll",
+      "__Comment": "NetMsg.Commons",
+      "DllRelPath": "../Libs/Engine.LockstepEngine.dll",
       "ProjectFilePath": "",
       "NameSpace": "NetMsg.Common",
-      "GeneratePath": "../../../LockstepPlatform/Common/NetMsg.Common/Src/",
+      "GeneratePath": "../Src/Engine.LockstepEngine.Untiy/Src/NetMsg.Common/Src/",
       "GenerateFileName": "ExtensionMsg.cs",
       "InterfaceName": "IBaseMsg",
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
       "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/Msg.json"
     },
     {
-      "__Comment": "MsgServer",
-      "DllRelPath": "../../../LockstepPlatform/Libs/Server/Lockstep.NetMsg.Server.dll",
+      "__Comment": "GameConfig",
+      "DllRelPath": "../bin/Tools.ECS.ECDefine.Game.dll",
       "ProjectFilePath": "",
-      "NameSpace": "NetMsg.Server",
-      "GeneratePath": "../../../LockstepPlatform/Server/NetMsg.Server/Src/",
-      "GenerateFileName": "ExtensionMsg.cs",
-      "InterfaceName": "IBaseMsg",
-      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/Msg.json"
+      "NameSpace": "NetMsg.Common",
+      "GeneratePath": "../Src/Game.Model/Src/__States/",
+      "GenerateFileName": "ExtensionGameConfig.cs",
+      "InterfaceName": "IGameConfigService",
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "CodePrefix": "\t\t",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/GameConfig.json"
     },
     {
-      "__Comment": "EntityConfig",
-      "DllRelPath": "../../bin/Lockstep.Game.ECS.Tank.dll",
-      "ProjectFilePath": "../../Src/Game.ECS/Game.ECS.csproj",
-      "NameSpace": "Lockstep.Game",
-      "GeneratePath": "../../Src/Game.ECS/Src/",
-      "GenerateFileName": "ExtensionEntitySetter.cs",
-      "InterfaceName": "IEntitySetter",
-      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/EntitySetter.json"
+      "__Comment": "GameConstState",
+      "DllRelPath": "../bin/Tools.ECS.ECDefine.Game.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "",
+      "GeneratePath": "../Src/Game.Model/Src/__States/",
+      "GenerateFileName": "ExtensionGameConstState.cs",
+      "InterfaceName": "IGameConstStateService",
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "CodePrefix": "\t\t",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/GameConstState.json"
     },
     {
-      "__Comment": "TankEcs",
-      "DllRelPath": "../../bin/Lockstep.Game.ECS.Tank.dll",
-      "ProjectFilePath": "../../Src/Game.ECS/Game.ECS.csproj",
-      "NameSpace": "Lockstep.Game",
-      "GeneratePath": "../../Src/Game.ECS/Src/",
-      "GenerateFileName": "ExtensionECS.cs",
-      "InterfaceName": "Entitas.IComponent",
-      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/ECS.json"
+      "__Comment": "GameState",
+      "DllRelPath": "../bin/Tools.ECS.ECDefine.Game.dll",
+      "ProjectFilePath": "",
+      "NameSpace": "",
+      "GeneratePath": "../Src/Game.Model/Src/__States/",
+      "GenerateFileName": "ExtensionGameState.cs",
+      "InterfaceName": "IGameStateService",
+      "IgnoreTypeAttriName": "SelfImplementAttribute",
+      "IgnoreFiledAttriName": "NoGenCodeAttribute",
+      "ForceGenAttriName": "",
+      "CodePrefix": "\t\t",
+      "TypeHandlerConfigPath": "../Config/CodeGenerator/TypeHandler/GameState.json"
     }
   ]
 }

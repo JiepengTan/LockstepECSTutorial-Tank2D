@@ -53,7 +53,7 @@ namespace Lockstep.Game.UI {
             ShowPlayerInfo(player2, TextScore2, TextLife2);
             var gameState = Contexts.sharedInstance.gameState;
             var game = Contexts.sharedInstance.game;
-            ShowText(TextEnemyCount, (GameStateService.Instance.remainCountToBorn).ToString());
+            ShowText(TextEnemyCount, (GameStateService.Instance.RemainCountToBorn).ToString());
             ShowText(TextLevel, (ConstStateService.Instance.CurLevel).ToString());
         }
     }

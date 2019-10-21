@@ -1,0 +1,58 @@
+{
+  "FileContent": [
+    "\nusing System;                                                                                                ",
+    "\nusing System.Collections.Generic;                                                                            ",
+    "\nusing Lockstep.Serialization;                                                                                ",
+    "\nusing Lockstep.Math;                                                                                ",
+    "\nusing NetMsg.Common;                                                                                ",
+    "\n//#DECLARE_BASE_TYPES                                                                                        ",
+    "\n                                                                                                             ",
+    "\n#if !DONT_USE_GENERATE_CODE                                                                                  ",
+    "\n//#TYPES_EXTENSIONS                                                                                          ",
+    "\n#endif                                                                                                       ",
+    "\n  "
+  ],
+
+  "TypeHandler": [
+    {
+      "_defaultCodeTemplete": "{0}public {2} {1} {{get => _config.{1};set => _config.{1} = value;}}",
+      "_enumCodeTemplete": "{0}public {2} {1} {{get => _config.{1};set => _config.{1} = value;}}",
+      "_clsCodeTemplete":  "{0}public {2} {1} {{get => _config.{1};set => _config.{1} = value;}}",
+      "_arrayCodeTemplete":"{0}public {2}[] {1} {{get => _config.{1};set => _config.{1} = value;}}",
+      "_lstCodeTemplete": "{0}public List<{2}> {1} {{get => _config.{1};set => _config.{1} = value;}}",
+      "_dictCodeTemplete": "{0}public {2} {1} {{get => _config.{1};set => _config.{1} = value;}}"
+    },
+    {
+      "_defaultCodeTemplete": "{0}public {2} {1};",
+      "_enumCodeTemplete":  "{0}public {2} {1};",
+      "_clsCodeTemplete":  "{0}public {2} {1};",
+      "_arrayCodeTemplete":  "{0}public {2}[] {1};",
+      "_lstCodeTemplete":  "{0}public List<{2}> {1};",
+      "_dictCodeTemplete":  "{0}public {2} {1};"
+    }, 
+    {
+      "_defaultCodeTemplete": "{0}{2} {1} {{get; set; }}",
+      "_enumCodeTemplete":    "{0}{2} {1} {{get; set; }}",
+      "_clsCodeTemplete":     "{0}{2} {1} {{get; set; }}",
+      "_arrayCodeTemplete":   "{0}{2}[] {1} {{get; set; }}",
+      "_lstCodeTemplete":     "{0}List<{2}> {1} {{get; set; }}",
+      "_dictCodeTemplete":    "{0}{2} {1} {{get; set; }}"
+    } 
+  ],
+  "ClsCodeTemplate": [
+    "\nnamespace Lockstep.Game{                                                                                              ",
+    "\n    public partial class GameConfigService  {                                                                               ",
+    "\n#TYPE_HANDLE0                                                                                                      ",
+    "\n    }                                                                                                          ",
+    "\n                                                                                              ",
+    "\n    public partial class GameConfig  {                                                                               ",
+    "\n#TYPE_HANDLE1                                                                                                      ",
+    "\n    }                                                                                                          ",
+    "\n}                                                                                                                   ",    
+    "\nnamespace Lockstep.Game{                                                                                              ",
+    "\n    public partial interface IGameConfigService  {                                                               ",             
+    "\n#TYPE_HANDLE2                                                                                                  ",
+    "\n   }                                                                                                                ",
+    "\n}                                                                                                                  "
+  ]
+}

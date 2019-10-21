@@ -92,8 +92,8 @@ namespace Lockstep.Game.Systems.Game {
                 tempPoss.Clear();
             }
 
-            var min = _gameConstStateService.mapMin;
-            var max = _gameConstStateService.mapMax;
+            var min = _gameConstStateService.MapMin;
+            var max = _gameConstStateService.MapMax;
             // bullet bound detected 
             foreach (var bullet in allBullet) {
                 if (_gameCollisionService.IsOutOfBound(bullet.pos.value, min, max)) {

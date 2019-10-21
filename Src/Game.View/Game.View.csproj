@@ -103,14 +103,6 @@
     <Compile Include="Src\UnityGameConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Game.ECS.Entitas\Game.ECS.Entitas.csproj">
-      <Project>{63c811c5-1c80-48b1-b212-74bd28a83e4c}</Project>
-      <Name>Game.ECS.Entitas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Game.Interfaces\Game.Interfaces.csproj">
-      <Project>{b7671ff6-04cb-4d96-8063-5fa16e9b9211}</Project>
-      <Name>Game.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Game.Model\Game.Model.csproj">
       <Project>{fbcee2cd-7d5f-4cc9-b78d-4a16228899b4}</Project>
       <Name>Game.Model</Name>

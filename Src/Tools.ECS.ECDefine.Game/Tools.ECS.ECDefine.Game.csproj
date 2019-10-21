@@ -18,6 +18,9 @@
       <OutputPath>../../bin/</OutputPath>
     </PropertyGroup>
     <ItemGroup>
+      <Reference Include="Common.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\Libs\LockstepEngine\Common.Interfaces.dll</HintPath>
+      </Reference>
       <Reference Include="Engine.LockstepEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
         <HintPath>..\..\Libs\Engine.LockstepEngine.dll</HintPath>
       </Reference>
