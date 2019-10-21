@@ -12,3 +12,6 @@ mkdir -p ../Src/Game.Model/Src/__ExcelParser/
 cp ../Config/ExcelParser/Output/CodeCS/*.cs ../Src/Game.Model/Src/__ExcelParser/
 rm -rf ../Src/Game.Model/Src/__ExcelParser/Table_Assets.cs
 
+echo "...Update Project File"
+../Tools/UpdateProjectFile
+

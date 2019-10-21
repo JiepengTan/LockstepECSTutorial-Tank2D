@@ -25,8 +25,11 @@ echo "5.ECS2Excel"
 echo "6.ParseExcel"
 ../Tools/ExcelParser
 
+echo "...Update Project File"
+../Tools/UpdateProjectFile
+
 echo "7.Complile generated code"
 msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ../Src/Tools.ECS.ECSOutput/Tools.ECS.ECSOutput.csproj
 
 echo "8.Build Game Project"
-../Tools/BuildAndCopyDll2Untiy
+../Tools/BuildAndCopyDll2Unity

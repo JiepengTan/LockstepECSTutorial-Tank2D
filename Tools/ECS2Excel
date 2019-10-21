@@ -11,3 +11,6 @@ rm -rf ../Src/Game.Model/Src/__ECS2Excel/*.cs
 mkdir -p ../Src/Game.Model/Src/__ECS2Excel/
 cp ../Config/ECS2Excel/Output/*.cs ../Src/Game.Model/Src/__ECS2Excel
 
+
+echo "...Update Project File"
+../Tools/UpdateProjectFile

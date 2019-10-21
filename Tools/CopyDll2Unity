@@ -1,0 +1,12 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+pwd
+
+echo "1.Copy files"
+mkdir -p ./Src/Client.Unity/Assets/Plugins/Game/
+mkdir -p ./Src/Client.Unity/Assets/Plugins/LockstepEngine/Editor/
+cp -rf ./Libs/LockstepEngine/* ./Src/Client.Unity/Assets/Plugins/LockstepEngine/
+rm -rf ./Src/Client.Unity/Assets/Plugins/LockstepEngine/Unity*
+mv -f ./Src/Client.Unity/Assets/Plugins/LockstepEngine/*.Editor* ./Src/Client.Unity/Assets/Plugins/LockstepEngine/Editor/
+cp -rf ./bin/Game* ./Src/Client.Unity/Assets/Plugins/Game/

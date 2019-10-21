@@ -1,0 +1,12 @@
+#!/bin/bash
+dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+cd $dir/../
+cd ./bin
+pwd
+echo "1.ExcelParser"
+mono Tools.CodeGenerator.dll ../Config/CodeGenerator/Config.json
+
+echo "...Update Project File"
+../Tools/UpdateProjectFile
+
+

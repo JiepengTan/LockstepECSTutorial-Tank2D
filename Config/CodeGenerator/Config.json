@@ -5,7 +5,7 @@
       "DllRelPath": "../Libs/Engine.LockstepEngine.dll",
       "ProjectFilePath": "",
       "NameSpace": "NetMsg.Common",
-      "GeneratePath": "../Src/Engine.LockstepEngine.Untiy/Src/NetMsg.Common/Src/",
+      "GeneratePath": "../Src/Engine.LockstepEngine.Unity/Src/NetMsg.Common/Src/",
       "GenerateFileName": "ExtensionMsg.cs",
       "InterfaceName": "IBaseMsg",
       "IgnoreTypeAttriName": "SelfImplementAttribute",

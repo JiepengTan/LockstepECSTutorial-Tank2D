@@ -14,3 +14,6 @@ rm -rf ../Src/Game.Model/Src/__Entitas/Common/
 
 echo "3.Complile generated code"
 #msbuild /property:Configuration=Debug /p:WarningLevel=0 /verbosity:minimal ../Src/Tools.ECS.ECSOutput/Tools.ECS.ECSOutput.csproj
+
+echo "4.Gen other simple codes"
+../Tools/SimpleCodeGen
